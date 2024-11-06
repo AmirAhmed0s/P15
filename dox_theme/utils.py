@@ -1,6 +1,5 @@
 import frappe
 
-
 @frappe.whitelist()
 def change_lang(language):
     try:
@@ -10,22 +9,19 @@ def change_lang(language):
         frappe.log_error(frappe.get_traceback())
         return False
 
-
 @frappe.whitelist()
 def get_lang():
     try:
         lang = frappe.db.get_value("User", frappe.session.user, "language")
-        gen_response(200, "Language data get successfully", lang)
+        gen_response(200, "Language data retrieved successfully", lang)
     except Exception as e:
         frappe.log_error(frappe.get_traceback())
-        gen_response(500, "Something wrong to get langauge. Try Again")
-
+        gen_response(500, "An error occurred while fetching language data. Please try again.")
 
 def gen_response(status, message, data=[]):
     frappe.response["status_code"] = status
     frappe.response["message"] = message
     frappe.response["data"] = data
-
 
 @frappe.whitelist()
 def get_workspace_sidebar_items_old():
@@ -86,7 +82,6 @@ def get_workspace_sidebar_items_old():
         pages.extend(private_pages)
 
     return {"pages": pages, "has_access": has_access}
-
 
 @frappe.whitelist()
 def get_workspace_sidebar_items():
