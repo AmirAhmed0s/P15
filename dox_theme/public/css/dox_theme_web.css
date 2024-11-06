@@ -4,23 +4,27 @@ body {
     font-family: 'Cairo', sans-serif !important;
 }
 
+/* For Page Card Heading */
 .page-card .page-card-head {
     background: linear-gradient(-135deg, #06345d 0%, #4688eb 100%);
     font-size: 14px;
-    border-top-left-radius: var(--border-radius-md, 8px);  /* Fallback if var is not defined */
-    border-top-right-radius: var(--border-radius-md, 8px); /* Fallback if var is not defined */
+    border-top-left-radius: var(--border-radius-md, 8px);  /* Fallback for ERPNext v14 if var is not defined */
+    border-top-right-radius: var(--border-radius-md, 8px); /* Fallback for ERPNext v14 if var is not defined */
 }
 
+/* For Page Card Container */
 .page_content .page-card {
-    border-radius: var(--border-radius-md, 8px);  /* Fallback if var is not defined */
+    border-radius: var(--border-radius-md, 8px);  /* Fallback for ERPNext v14 if var is not defined */
 }
 
+/* Indicator within Page Card Heading */
 .page_content .page-card .page-card-head .indicator {
     color: white;
     font-size: 14px;
     line-height: 28px;
 }
 
+/* Primary Button Styling */
 .btn-primary {
     background: linear-gradient(-135deg, #4688eb 0%, #06345d 100%);
     -webkit-box-shadow: 0px 0px 30px 0px rgb(42 31 188 / 40%);
@@ -39,6 +43,7 @@ body {
     border-color: #0062cc;
 }
 
+/* General Button Styling */
 .btn {
     font-size: 14px;
     letter-spacing: 1px;
@@ -54,7 +59,21 @@ body {
     justify-content: center;
 }
 
+/* Button Hover and Focus States */
 .btn:focus,
 .btn:hover {
     color: #fff;
+}
+
+/* Responsive Support: Ensure buttons and cards are responsive */
+@media (max-width: 768px) {
+    .btn {
+        font-size: 12px;
+        padding: 0px 20px;
+        line-height: 35px;
+    }
+
+    .page-card .page-card-head {
+        font-size: 12px;
+    }
 }
