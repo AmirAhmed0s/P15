@@ -6,16 +6,13 @@ body {
 
 .page-card .page-card-head {
     background: linear-gradient(-135deg, #06345d 0%, #4688eb 100%);
-    /* background-image: -moz-linear-gradient(top, #12436e 0%, #1d71b8 100%);
-    background-image: -webkit-linear-gradient(top, #12436e 0%, #1d71b8 100%);
-    background-image: linear-gradient(to bottom, #12436e 0%, #1d71b8 100%); */
     font-size: 14px;
-    border-top-left-radius: var(--border-radius-md);
-    border-top-right-radius: var(--border-radius-md);
+    border-top-left-radius: var(--border-radius-md, 8px);  /* Fallback if var is not defined */
+    border-top-right-radius: var(--border-radius-md, 8px); /* Fallback if var is not defined */
 }
 
 .page_content .page-card {
-    border-radius: var(--border-radius-md);
+    border-radius: var(--border-radius-md, 8px);  /* Fallback if var is not defined */
 }
 
 .page_content .page-card .page-card-head .indicator {
@@ -26,21 +23,17 @@ body {
 
 .btn-primary {
     background: linear-gradient(-135deg, #4688eb 0%, #06345d 100%);
-    /* background-image: -moz-linear-gradient(top, #12436e 0%, #1d71b8 100%);
-    background-image: -webkit-linear-gradient(top, #12436e 0%, #1d71b8 100%);
-    background-image: linear-gradient(to bottom, #12436e 0%, #1d71b8 100%); */
     -webkit-box-shadow: 0px 0px 30px 0px rgb(42 31 188 / 40%);
     box-shadow: 0px 0px 30px 0px rgb(42 31 188 / 40%);
     background-size: auto 140%;
-    border: 0px;
+    border: 0;
+    color: white;
+    transition: background-position 0.5s ease, color 0.5s ease, border-color 0.5s ease;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
     background-position: bottom center;
-}
-
-.btn-primary:hover {
     color: #fff;
     background-color: #0069d9;
     border-color: #0062cc;
@@ -52,10 +45,16 @@ body {
     text-transform: uppercase;
     padding: 0px 30px;
     line-height: 40px;
-    -webkit-border-radius: 6px;
     border-radius: 6px;
     cursor: pointer;
-    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    outline: 0;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:focus,
+.btn:hover {
+    color: #fff;
 }
