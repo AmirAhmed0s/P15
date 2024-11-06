@@ -1,624 +1,180 @@
-// @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap');
-
-// body {
-// 	font-family: 'Cairo', sans-serif !important;
-// }
-
-// .chart-container {
-// 	font-family: 'Cairo', sans-serif !important;
-// }
-
-// // $color_1: #06345d;
-// // $color_2: white;
-// // $color_3: #fff;
-// // $color_4: #1F272E;
-// // $background-color_1: #06345d;
-// // $background-color_2: #b4f5ff;
-// // $background-color_3: #4191D0;
-// // $background-color_4: #204F79;
-// // $background-color_5: var(--fg-hover-color);
-
-// $color_1: #06345d;
-// $color_2: white;
-// $color_3: #fff;
-// $color_4: #1F272E;
-// $background-dark-blue: #06345d;
-// $background-color_1: #24b0c7;
-// $background-color_2: #b4f5ff;
-// // $background-color_3: #178394;
-// $background-color_3: #4ec3d5;
-// $background-color_4: #204F79;
-// $background-color_5: var(--fg-hover-color);
-// $scrollbar-color: #178394;
-// $active_navbar: #178394;
-
-// .layout-side-section {
-// 	@media screen and (min-width: 767px) {
-// 		background-color: $background-color_1;
-// 	}
-
-// 	padding-top: 15px;
-// 	color: #fff !important;
-
-// 	.icon-btn {
-// 		background-color: transparent !important;
-// 		border: 1px solid $color_2;
-// 	}
-
-// 	.icon,
-// 	.sidebar-label .icon {
-// 		--icon-stroke: #fff;
-// 		stroke: #fff !important;
-// 		fill: transparent;
-// 		stroke-width: 2;
-// 		stroke: #fff;
-// 	}
-
-// 	.sidebar-label {
-// 		color: $color_3;
-// 	}
-
-// 	p,
-// 	.text-muted {
-// 		color: #fff !important;
-// 	}
-
-// 	.checkbox .label-area {
-// 		color: #fff;
-// 	}
-
-// 	a.add-group-by,
-// 	a.list-tag-preview {
-// 		color: #fff;
-
-// 		&:hover {
-// 			color: #fff;
-// 		}
-// 	}
-
-// 	.sidebar-item-control .btn {
-// 		background: transparent;
-// 		border: 1px solid white;
-// 	}
-// }
-
-// header.navbar.navbar-expand.sticky-top {
-// 	background-color: $background-color_1;
-// }
-
-// .widget {
-// 	border-radius: 20px;
-
-// 	.widget-head {
-// 		.widget-label {
-// 			.widget-title {
-// 				svg {
-// 					--icon-stroke: #fff;
-// 					stroke: #fff !important;
-// 					fill: transparent;
-// 					stroke-width: 2;
-// 					stroke: #fff;
-// 				}
-
-// 				color: $color_2;
-// 			}
-// 		}
-// 	}
-// }
-
-// .widget.edit-mode {
-// 	.widget-head {
-// 		.widget-label {
-// 			.widget-title {
-// 				color: #1F272E;
-// 			}
-// 		}
-// 	}
-// }
-
-// .page-container {
-// 	background-color: $background-color_2;
-
-// 	.page-head {
-// 		background-color: $background-color_2;
-// 	}
-// }
-
-// .widget.links-widget-box {
-// 	.link-item {
-// 		color: $color_1;
-// 		background-color: $background-color_5;
-
-// 		&:hover {
-// 			.indicator-pill {
-// 				background: $active_navbar;
-// 				color: $color_2;
-// 			}
-// 		}
-// 	}
-
-// 	background: $background-color_1 0% 0% no-repeat padding-box;
-// 	border-radius: 30px;
-// 	padding: 15px;
-// }
-
-// .widget.links-widget-box.skeleton-card {
-// 	background-color: var(--skeleton-bg);
-// }
-
-// .list-sidebar {
-// 	.sidebar-section {
-// 		padding: 10px;
-// 	}
-// }
-
-// .desk-sidebar-item.standard-sidebar-item {
-// 	&:hover {
-// 		background-color: $background-color_1;
-// 	}
-
-// 	a {
-// 		&:hover {
-// 			color: $color_2;
-// 		}
-// 	}
-// }
-
-// .standard-sidebar {
-// 	.standard-sidebar-item {
-// 		background-color: $background-color_3;
-
-// 		&:hover {
-// 			background-color: $background-color_1;
-// 		}
-// 	}
-
-// 	.standard-sidebar-item.selected {
-// 		// background-color: $background-color_4;
-// 		background-color: $active_navbar;
-// 	}
-// }
-
-// .search-dialog {
-// 	.search-results {
-// 		.search-sidebar {
-// 			.standard-sidebar-item {
-// 				background-color: $background-color_3;
-
-// 				&:hover {
-// 					// background-color: $background-color_1;
-// 					background-color: $active_navbar;
-// 				}
-// 			}
-
-// 			.standard-sidebar-item.selected {
-// 				// background-color: $background-color_4;
-// 				background-color: $active_navbar;
-// 			}
-// 		}
-// 	}
-// }
-
-// .desk-sidebar {
-// 	.standard-sidebar-item {
-// 		background-color: $background-color_3;
-
-// 		&:hover {
-// 			background-color: $active_navbar;
-// 		}
-// 	}
-
-// 	.standard-sidebar-item.selected {
-// 		// background-color: $background-color_4;
-// 		background-color: $active_navbar;
-// 	}
-// }
-
-// .desk-sidebar-item.selected {
-// 	// background-color: $background-color_4;
-// 	background-color: $active_navbar;
-// 	border: 1px solid white;
-
-// 	a {
-// 		color: $color_2;
-// 	}
-// }
-
-// .page-content {
-// 	.desk-sidebar-item {
-// 		a {
-// 			color: $color_2;
-// 		}
-// 	}
-// }
-
-// #navbar-breadcrumbs {
-// 	li.disabled a {
-// 		color: $color_3;
-// 	}
-
-// 	a {
-// 		color: $color_2;
-
-// 		&::before {
-// 			content: " ";
-// 			border: solid #fff;
-// 			border-width: 0 2px 2px 0;
-// 			display: inline-block;
-// 			padding: 3px;
-// 			transform: rotate(-45deg);
-// 			-webkit-transform: rotate(-45deg);
-// 			margin-right: 10px;
-// 		}
-// 	}
-// }
-
-// [data-page-route="Workspaces"] {
-// 	.layout-main {
-// 		.layout-side-section {
-// 			scrollbar-color: $scrollbar-color transparent;
-// 			scrollbar-width: unset;
-
-// 			&::-webkit-scrollbar {
-// 				width: 5px;
-// 				scrollbar-color: $scrollbar-color transparent;
-// 				scrollbar-width: unset;
-// 			}
-
-// 			&::-webkit-scrollbar-thumb {
-// 				background: $scrollbar-color;
-// 				border-radius: 20px;
-// 				scrollbar-color: $scrollbar-color transparent;
-// 				scrollbar-width: unset;
-// 			}
-
-// 			&::-webkit-scrollbar-track {
-// 				background: #ddd;
-// 				border-radius: 20px;
-// 			}
-// 		}
-
-// 		.layout-main-section-wrapper {
-// 			scrollbar-color: $scrollbar-color transparent;
-// 			scrollbar-width: unset;
-
-// 			&::-webkit-scrollbar {
-// 				width: 5px;
-// 				scrollbar-color: $scrollbar-color transparent;
-// 				scrollbar-width: unset;
-// 			}
-
-// 			&::-webkit-scrollbar-thumb {
-// 				background: $scrollbar-color;
-// 				border-radius: 20px;
-// 				scrollbar-color: $scrollbar-color transparent;
-// 				scrollbar-width: unset;
-// 			}
-
-// 			&::-webkit-scrollbar-track {
-// 				background: #ddd;
-// 				border-radius: 20px;
-// 			}
-// 		}
-// 	}
-// }
-
-// .navbar-nav {
-// 	.icon {
-// 		--icon-stroke: #fff;
-// 		stroke: #fff !important;
-// 		fill: transparent;
-// 		stroke-width: 2;
-// 		stroke: #fff;
-// 	}
-// }
-
-// .standard-sidebar-label {
-// 	color: $color_2;
-// }
-
-// .navbar {
-// 	.navbar-nav {
-// 		.nav-link {
-// 			padding: 0;
-// 			color: $color_2;
-// 		}
-// 	}
-// }
-
-// .widget.shortcut-widget-box.skeleton-card {
-// 	background-color: var(--skeleton-bg);
-// }
-
-// .widget.shortcut-widget-box {
-// 	background: $background-color_1 0% 0% no-repeat padding-box;
-// 	border-radius: 30px;
-// 	padding: 15px;
-
-// 	.widget-head {
-// 		.widget-title {
-// 			color: $color_3 !important;
-// 		}
-// 	}
-
-// 	&:hover {
-// 		background: $active_navbar 0% 0% no-repeat padding-box;
-
-// 		.widget-title {
-// 			color: $color_3 !important;
-// 		}
-// 	}
-// }
-
-// .indicator-pill.yellow {
-// 	&:before {
-// 		background: white;
-// 	}
-
-// 	&:after {
-// 		background: white;
-// 	}
-
-// 	background: $background-color_1;
-// 	color: $color_2;
-// }
-
-// .indicator-pill-right.yellow {
-// 	.indicator-pill-round.yellow {
-// 		&:before {
-// 			background: white;
-// 		}
-
-// 		&:after {
-// 			background: white;
-// 		}
-
-// 		background: $background-color_1;
-// 		color: $color_2;
-// 	}
-// }
-
-// .indicator-pill.gray {
-// 	&:before {
-// 		background: white;
-// 	}
-
-// 	&:after {
-// 		background: white;
-// 	}
-
-// 	background: $background-color_1;
-// 	color: $color_2;
-// }
-
-// .indicator-pill-right.gray {
-// 	&:before {
-// 		background: white;
-// 	}
-
-// 	&:after {
-// 		background: white;
-// 	}
-
-// 	background: $background-color_1;
-// 	color: $color_2;
-// }
-
-// .indicator-pill-round.gray {
-// 	&:before {
-// 		background: white;
-// 	}
-
-// 	&:after {
-// 		background: white;
-// 	}
-
-// 	background: $background-color_1;
-// 	color: $color_2;
-// }
-
-// .indicator-pill.grey {
-// 	&:before {
-// 		background: white;
-// 	}
-
-// 	&:after {
-// 		background: white;
-// 	}
-
-// 	background: $background-color_1;
-// 	color: $color_2;
-// }
-
-// .indicator-pill-right.grey {
-// 	&:before {
-// 		background: white;
-// 	}
-
-// 	&:after {
-// 		background: white;
-// 	}
-
-// 	background: $background-color_1;
-// 	color: $color_2;
-// }
-
-// .indicator-pill-round.grey {
-// 	&:before {
-// 		background: white;
-// 	}
-
-// 	&:after {
-// 		background: white;
-// 	}
-
-// 	background: $background-color_1;
-// 	color: $color_2;
-// }
-
-// .workspace-skeleton {
-// 	.shortcut-widget-box {
-// 		height: 50px;
-// 	}
-// }
-
-// .layout-main-section {
-// 	.ce-block__content {
-// 		.divider {
-// 			display: none;
-// 		}
-// 	}
-// }
-
-// #current_lang {
-// 	font-size: 14px;
-// }
-
-// [data-theme=dark] {
-// 	.title-area {
-// 		.title-text {
-// 			color: $color_4;
-// 		}
-// 	}
-
-// 	.widget.links-widget-box {
-// 		.link-item {
-// 			color: $color_3;
-// 		}
-// 	}
-// }
-
-// .nav-link.lang-icon {
-// 	&::before {
-// 		content: "\f0ac";
-// 		font: normal normal normal 14px/1 FontAwesome;
-// 		margin-right: 4px;
-// 	}
-// }
-
-// [data-page-route=Workspaces] .codex-editor .codex-editor__redactor .ce-block .ce-block__content .widget.edit-mode {
-// 	background-color: #fff;
-// }
-
-// .dashboard .widget .widget-head .widget-label .widget-title {
-// 	color: black;
-// }
-
-// .form-tabs-list .form-tabs .nav-item .nav-link.active {
-// 	color: #2490ef;
-// }
-
-// .form-section .section-head {
-// 	color: #2490ef;
-// }
-
-// .list-row:hover:not(.list-row-head),
-// .list-row-head:hover:not(.list-row-head) {
-// 	background-color: #b4f5ff;
-// }
-
-// .layout-side-section {
-// 	border-radius: var(--border-radius-md);
-// }
-
-
-// .like-disabled-input {
-// 	background-color: #C3E0FB;
-// }
-
-// .checkbox .label-area {
-// 	color: #2490ef;
-// }
-
-// .form-section.card-section {
-// 	border-bottom: 8px solid #b4f5ff;
-// }
-
-// .section-body [data-fieldname="items"] * {
-// 	font-size: 11px;
-// }
-
-// .section-body .form-grid .grid-heading-row {
-// 	// background-color: #C3E0FB;
-// 	background-color: $background-color_1;
-// 	color: #fff;
-// }
-
-// // .section-body {
-
-// .form-control,
-// .form-control:focus {
-// 	box-shadow: 0 0 0 2px #C3E0FB;
-// }
-
-// // }
-
-// .btn-primary.primary-action[data-label="Submit"] {
-// 	background-color: red;
-// }
-
-// .btn-primary.primary-action[data-label="%D8%AA%D8%B3%D8%AC%D9%8A%D9%84"] {
-// 	background-color: red;
-// }
-
-
-// .frappe-list {
-// 	.level.list-row-head {
-// 		background-color: $background-color_1;
-
-// 		.list-header-subject {
-// 			color: #fff;
-// 		}
-
-// 		.list-count {
-// 			color: #fff;
-// 		}
-
-// 	}
-
-// 	.list-row-container {
-// 		border-bottom: 1px solid $background-color_1;
-// 	}
-
-// 	.list-row {
-// 		height: 40px;
-// 	}
-
-// 	.list-row-container * {
-// 		font-size: 12px;
-// 	}
-// }
-
-// .dashboard {
-// 	.widget {
-// 		// background: linear-gradient(180deg, #0a6cc25c 0%, #0a6cc28a 100%);
-// 		// background: linear-gradient(180deg, #0a6cc24f 0%, #0a6cc275 100%);
-// 		background: linear-gradient(180deg, $background-color_1 0%, $background-color_1 100%);
-// 		box-shadow: var(--shadow-lg);
-// 		border-radius: var(--border-radius-md);
-// 	}
-
-// 	.widget-group {
-// 		.report-summary {
-// 			// background-color: #0a6cc24f;
-// 			background-color: $background-color_1;
-// 			box-shadow: var(--shadow-base);
-// 		}
-// 	}
-// }
-
-// .workspace-sidebar-skeleton .sidebar-box {
-// 	background-color: transparent;
-// }
-
-// .desk-page {
-// 	.ce-header {
-// 		.h4 {
-// 			display: none;
-// 		}
-// 	}
-// }
-
-// .ql-editor {
-// 	font-family: Cairo, sans-serif !important;
-// }
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap');
+
+body {
+	font-family: 'Cairo', sans-serif !important;
+}
+
+.chart-container {
+	font-family: 'Cairo', sans-serif !important;
+}
+
+$color_1: #06345d;
+$color_2: white;
+$color_3: #fff;
+$color_4: #1F272E;
+$background-dark-blue: #06345d;
+$background-color_1: #24b0c7;
+$background-color_2: #b4f5ff;
+$background-color_3: #4ec3d5;
+$background-color_4: #204F79;
+$background-color_5: var(--fg-hover-color);
+$scrollbar-color: #178394;
+$active_navbar: #178394;
+
+.layout-side-section {
+	@media screen and (min-width: 767px) {
+		background-color: $background-color_1;
+	}
+
+	padding-top: 15px;
+	color: $color_2 !important;
+
+	.icon-btn {
+		background-color: transparent !important;
+		border: 1px solid $color_2;
+	}
+
+	.icon,
+	.sidebar-label .icon {
+		--icon-stroke: $color_2;
+		stroke: $color_2 !important;
+		fill: transparent;
+		stroke-width: 2;
+	}
+
+	.sidebar-label {
+		color: $color_3;
+	}
+
+	.text-muted, p {
+		color: $color_3 !important;
+	}
+
+	.checkbox .label-area {
+		color: $color_3;
+	}
+
+	a.add-group-by,
+	a.list-tag-preview {
+		color: $color_3;
+
+		&:hover {
+			color: $color_3;
+		}
+	}
+
+	.sidebar-item-control .btn {
+		background: transparent;
+		border: 1px solid $color_2;
+	}
+}
+
+header.navbar.navbar-expand.sticky-top {
+	background-color: $background-color_1;
+}
+
+.widget {
+	border-radius: 20px;
+
+	.widget-head .widget-label .widget-title {
+		color: $color_2;
+		svg {
+			--icon-stroke: $color_2;
+			stroke: $color_2 !important;
+			fill: transparent;
+			stroke-width: 2;
+		}
+	}
+
+	&.edit-mode .widget-title {
+		color: $color_4;
+	}
+}
+
+.page-container {
+	background-color: $background-color_2;
+	.page-head {
+		background-color: $background-color_2;
+	}
+}
+
+.widget.links-widget-box {
+	background: $background-color_1;
+	border-radius: 30px;
+	padding: 15px;
+
+	.link-item {
+		color: $color_1;
+		background-color: $background-color_5;
+
+		&:hover .indicator-pill {
+			background: $active_navbar;
+			color: $color_2;
+		}
+	}
+}
+
+.desk-sidebar .standard-sidebar-item {
+	background-color: $background-color_3;
+
+	&:hover {
+		background-color: $active_navbar;
+	}
+
+	&.selected {
+		background-color: $active_navbar;
+	}
+}
+
+.navbar .navbar-nav .nav-link {
+	color: $color_2;
+	padding: 0;
+}
+
+.nav-link.lang-icon::before {
+	content: "\f0ac";
+	font: normal normal normal 14px/1 FontAwesome;
+	margin-right: 4px;
+}
+
+[data-page-route="Workspaces"] .codex-editor .codex-editor__redactor .ce-block .ce-block__content .widget.edit-mode {
+	background-color: #fff;
+}
+
+.dashboard .widget .widget-head .widget-label .widget-title {
+	color: black;
+}
+
+.form-section .section-head,
+.form-tabs-list .form-tabs .nav-item .nav-link.active {
+	color: #2490ef;
+}
+
+.list-row:hover:not(.list-row-head),
+.list-row-head:hover:not(.list-row-head) {
+	background-color: $background-color_2;
+}
+
+.layout-side-section {
+	border-radius: var(--border-radius-md);
+}
+
+.like-disabled-input {
+	background-color: #C3E0FB;
+}
+
+.checkbox .label-area {
+	color: #2490ef;
+}
+
+.form-section.card-section {
+	border-bottom: 8px solid $background-color_2;
+}
+
+.section-body [data-fieldname="items"] * {
+	font-size: 11px;
+}
+
+.section-body .form-grid .grid-heading-row {
+	background: $background-color_1;
+}
