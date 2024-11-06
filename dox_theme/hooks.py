@@ -80,6 +80,7 @@ after_migrate = [
     "dox_theme.whitelabel.dox_patch",
     "dox_theme.workspace_icon_set.update_workspace_images",
 ]
+
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
@@ -88,7 +89,6 @@ after_migrate = [
 
 # Permissions
 # -----------
-# Permissions evaluated in scripted ways
 
 # permission_query_conditions = {
 # 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
@@ -100,7 +100,6 @@ after_migrate = [
 
 # DocType Class
 # ---------------
-# Override standard doctype classes
 
 # override_doctype_class = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
@@ -108,7 +107,6 @@ after_migrate = [
 
 # Document Events
 # ---------------
-# Hook on document methods and events
 
 # doc_events = {
 # 	"*": {
@@ -153,7 +151,7 @@ after_migrate = [
 override_whitelisted_methods = {
     "frappe.desk.desktop.get_workspace_sidebar_items": "dox_theme.utils.get_workspace_sidebar_items"
 }
-#
+
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
@@ -164,7 +162,6 @@ override_whitelisted_methods = {
 # exempt linked doctypes from being automatically cancelled
 #
 # auto_cancel_exempted_doctypes = ["Auto Repeat"]
-
 
 # User Data Protection
 # --------------------
