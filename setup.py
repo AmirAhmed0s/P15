@@ -7,7 +7,7 @@ with open("requirements.txt") as f:
 try:
     from dox_theme import __version__ as version
 except ImportError:
-    version = "0.0.1"  # Fallback version if not found
+    version = "0.0.1"  # Fallback version if __version__ is not found
 
 setup(
     name="dox_theme",
